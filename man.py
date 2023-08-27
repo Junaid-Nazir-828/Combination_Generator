@@ -112,6 +112,14 @@ class Ui_MainWindow(object):
                 self.outputBtn.setIconSize(QtCore.QSize(32, 32))
                 self.outputBtn.setObjectName("outputBtn")
                 self.verticalLayout_4.addWidget(self.outputBtn)
+
+                self.Times3Btn = QtWidgets.QPushButton(self.leftButtonsFrame, clicked = lambda : self.show3TimesTab())
+                self.Times3Btn.setObjectName(u"Times3")
+                self.Times3Btn.setFont(font)
+                self.Times3Btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+
+                self.verticalLayout_4.addWidget(self.Times3Btn)
+
                 self.verticalLayout_2.addWidget(self.leftButtonsFrame, 0, QtCore.Qt.AlignTop)
                 spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
                 self.verticalLayout_2.addItem(spacerItem)
@@ -610,6 +618,216 @@ class Ui_MainWindow(object):
                 self.stackedWidget.addWidget(self.multiLinePage)
 
 
+                self.Times3_Page = QtWidgets.QWidget()
+                self.Times3_Page.setObjectName(u"Times3_Page")
+                self.horizontalLayout_31 = QtWidgets.QHBoxLayout(self.Times3_Page)
+                self.horizontalLayout_31.setObjectName(u"horizontalLayout_31")
+                self.verticalLayout_13 = QtWidgets.QVBoxLayout()
+                self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+                self.horizontalLayout_24 = QtWidgets.QHBoxLayout()
+                self.horizontalLayout_24.setObjectName(u"horizontalLayout_24")
+                self.label_5 = QtWidgets.QLabel(self.Times3_Page)
+                self.label_5.setObjectName(u"label_5")
+                self.label_5.setFont(font2)
+                self.label_5.setStyleSheet(u"color:#E57254;")
+
+                self.horizontalLayout_24.addWidget(self.label_5, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+
+
+                self.verticalLayout_13.addLayout(self.horizontalLayout_24)
+
+                self.horizontalLayout_25 = QtWidgets.QHBoxLayout()
+                self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
+                self.radio_byName_3T = QtWidgets.QRadioButton(self.Times3_Page)
+                self.radio_byName_3T.setObjectName(u"radio_byName_3T")
+                self.radio_byName_3T.setFont(font3)
+                self.radio_byName_3T.setStyleSheet(u"margin-left:20px;")
+
+                self.horizontalLayout_25.addWidget(self.radio_byName_3T, 0, QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+
+                self.lineEdit_Name_3T = QtWidgets.QLineEdit(self.Times3_Page)
+                self.lineEdit_Name_3T.setObjectName(u"lineEdit_Name_3T")
+                self.lineEdit_Name_3T.setFont(font3)
+                self.lineEdit_Name_3T.setStyleSheet(u"border : 2px solid white;\n"
+        "border-radius : 10px;\n"
+        "margin-right:20px;\n"
+        "padding:5px;\n"
+        "background-color:#16191d;\n"
+        "color:#46BCDE;")
+
+                self.horizontalLayout_25.addWidget(self.lineEdit_Name_3T, 0, QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+
+                self.horizontalLayout_25.setStretch(0, 1)
+                self.horizontalLayout_25.setStretch(1, 2)
+
+                self.verticalLayout_13.addLayout(self.horizontalLayout_25)
+
+                self.horizontalLayout_26 = QtWidgets.QHBoxLayout()
+                self.horizontalLayout_26.setObjectName(u"horizontalLayout_26")
+                self.lineEdit_filePath_3T = QtWidgets.QLineEdit(self.Times3_Page)
+                self.lineEdit_filePath_3T.setObjectName(u"lineEdit_filePath_3T")
+                self.lineEdit_filePath_3T.setFont(font3)
+                self.lineEdit_filePath_3T.setStyleSheet(u"border : 2px solid white;\n"
+        "border-radius : 10px;\n"
+        "margin-left:20px;\n"
+        "margin-right:40px;\n"
+        "padding:5px;\n"
+        "background-color:#16191d;\n"
+        "color:#46BCDE;")
+
+                self.horizontalLayout_26.addWidget(self.lineEdit_filePath_3T, 0, QtCore.Qt.AlignVCenter)
+
+                self.btn_browse_3T = QtWidgets.QPushButton(self.Times3_Page, clicked = lambda : self.browseBtnPressed_3())
+                self.btn_browse_3T.setObjectName(u"btn_browse_3T")
+                self.btn_browse_3T.setFont(font)
+                self.btn_browse_3T.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+                self.btn_browse_3T.setStyleSheet(u"QPushButton{\n"
+        "border:2px solid white;\n"
+        "border-radius:10px;\n"
+        "padding-left:18px;\n"
+        "padding-right:18px;\n"
+        "padding-top:5px;\n"
+        "padding-bottom:5px;\n"
+        "margin-left:5px;\n"
+        "margin-right:25px;\n"
+        "background-color: rgb(79, 79, 79)\n"
+        "}\n"
+        "\n"
+        "QPushButton:hover{\n"
+        "background-color:#E57254;\n"
+        "}")
+
+                self.horizontalLayout_26.addWidget(self.btn_browse_3T, 0, QtCore.Qt.AlignVCenter)
+
+
+                self.verticalLayout_13.addLayout(self.horizontalLayout_26)
+
+                self.horizontalLayout_27 = QtWidgets.QHBoxLayout()
+                self.horizontalLayout_27.setObjectName(u"horizontalLayout_27")
+                self.textEdit_results_3T = QtWidgets.QTextEdit(self.Times3_Page)
+                self.textEdit_results_3T.setObjectName(u"textEdit_results_3T")
+                self.textEdit_results_3T.setFont(font4)
+                self.textEdit_results_3T.setStyleSheet(u"border : 2px solid white;\n"
+        "border-radius : 20px;\n"
+        "margin-left:20px;\n"
+        "margin-right:20px;\n"
+        "padding:5px;\n"
+        "background-color:#16191d;")
+                self.textEdit_results_3T.setReadOnly(True)
+                self.textEdit_results_3T.setTabStopWidth(80)
+
+                self.horizontalLayout_27.addWidget(self.textEdit_results_3T, 0, QtCore.Qt.AlignVCenter)
+
+
+                self.verticalLayout_13.addLayout(self.horizontalLayout_27)
+
+                self.horizontalLayout_28 = QtWidgets.QHBoxLayout()
+                self.horizontalLayout_28.setObjectName(u"horizontalLayout_28")
+                self.btn_search_3T = QtWidgets.QPushButton(self.Times3_Page , clicked = lambda : self.multiLineSearch_3Times())
+                self.btn_search_3T.setObjectName(u"btn_search_3T")
+                self.btn_search_3T.setFont(font)
+                self.btn_search_3T.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+                self.btn_search_3T.setStyleSheet(u"QPushButton{\n"
+        "border:2px solid white;\n"
+        "border-radius:10px;\n"
+        "padding-left:25px;\n"
+        "padding-right:25px;\n"
+        "padding-top:5px;\n"
+        "padding-bottom:5px;\n"
+        "margin-left:5px;\n"
+        "margin-right:5px;\n"
+        "background-color: rgb(79, 79, 79)\n"
+        "}\n"
+        "\n"
+        "QPushButton:hover{\n"
+        "background-color:#23C99A;\n"
+        "}")
+
+                self.horizontalLayout_28.addWidget(self.btn_search_3T, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+
+
+                self.verticalLayout_13.addLayout(self.horizontalLayout_28)
+
+                self.horizontalLayout_29 = QtWidgets.QHBoxLayout()
+                self.horizontalLayout_29.setObjectName(u"horizontalLayout_29")
+                self.label_6 = QtWidgets.QLabel(self.Times3_Page)
+                self.label_6.setObjectName(u"label_6")
+                self.label_6.setFont(font3)
+                self.label_6.setStyleSheet(u"margin-left:20px")
+
+                self.horizontalLayout_29.addWidget(self.label_6, 0, QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+
+                self.lineEdit_number_3T = QtWidgets.QLineEdit(self.Times3_Page)
+                self.lineEdit_number_3T.setObjectName(u"lineEdit_number_3T")
+                self.lineEdit_number_3T.setFont(font3)
+                self.lineEdit_number_3T.setCursor(QtGui.QCursor(QtCore.Qt.IBeamCursor))
+                self.lineEdit_number_3T.setStyleSheet(u"border : 2px solid white;\n"
+        "border-radius : 10px;\n"
+        "margin-left:20px;\n"
+        "margin-right:20px;\n"
+        "padding:5px;\n"
+        "background-color:#16191d;\n"
+        "color:#46BCDE;")
+
+                self.horizontalLayout_29.addWidget(self.lineEdit_number_3T, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+
+                self.btn_apply_3T = QtWidgets.QPushButton(self.Times3_Page, clicked= lambda : self.ApplyFilterPressed_3Times())
+                self.btn_apply_3T.setObjectName(u"btn_apply_3T")
+                self.btn_apply_3T.setFont(font)
+                self.btn_apply_3T.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+                self.btn_apply_3T.setStyleSheet(u"QPushButton{\n"
+        "border:2px solid white;\n"
+        "border-radius:10px;\n"
+        "padding-left:22px;\n"
+        "padding-right:22px;\n"
+        "padding-top:5px;\n"
+        "padding-bottom:5px;\n"
+        "margin-left:5px;\n"
+        "margin-right:25px;\n"
+        "background-color: rgb(79, 79, 79)\n"
+        "}\n"
+        "\n"
+        "QPushButton:hover{\n"
+        "background-color:#23C99A;\n"
+        "}")
+
+                self.horizontalLayout_29.addWidget(self.btn_apply_3T, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignVCenter)
+
+                self.horizontalLayout_29.setStretch(0, 1)
+                self.horizontalLayout_29.setStretch(1, 9)
+
+                self.verticalLayout_13.addLayout(self.horizontalLayout_29)
+
+                self.horizontalLayout_30 = QtWidgets.QHBoxLayout()
+                self.horizontalLayout_30.setObjectName(u"horizontalLayout_30")
+                self.textEdit_filterResults_3T = QtWidgets.QTextEdit(self.Times3_Page)
+                self.textEdit_filterResults_3T.setObjectName(u"textEdit_filterResults_3T")
+                self.textEdit_filterResults_3T.setFont(font4)
+                self.textEdit_filterResults_3T.setStyleSheet(u"border : 2px solid white;\n"
+        "border-radius : 20px;\n"
+        "margin-left:20px;\n"
+        "margin-right:20px;\n"
+        "padding:5px;\n"
+        "background-color:#16191d;")
+                self.textEdit_filterResults_3T.setReadOnly(True)
+
+                self.horizontalLayout_30.addWidget(self.textEdit_filterResults_3T)
+
+
+                self.verticalLayout_13.addLayout(self.horizontalLayout_30)
+
+                self.verticalLayout_13.setStretch(0, 1)
+                self.verticalLayout_13.setStretch(1, 2)
+                self.verticalLayout_13.setStretch(2, 2)
+                self.verticalLayout_13.setStretch(3, 4)
+                self.verticalLayout_13.setStretch(4, 2)
+                self.verticalLayout_13.setStretch(5, 2)
+                self.verticalLayout_13.setStretch(6, 2)
+
+                self.horizontalLayout_31.addLayout(self.verticalLayout_13)
+
+                self.stackedWidget.addWidget(self.Times3_Page)
+
                 self.generatePage = QtWidgets.QWidget()
                 self.generatePage.setObjectName("generatePage")
                 self.verticalLayout_11 = QtWidgets.QVBoxLayout(self.generatePage)
@@ -751,6 +969,18 @@ class Ui_MainWindow(object):
                 self.filterBy_edit.setPlaceholderText(_translate("MainWindow", u"Enter Number"))
                 self.applyFilterBtn.setText(_translate("MainWindow", u"Apply"))
 
+                self.label_5.setText(_translate("MainWindow", u"3 Times Search"))
+                self.radio_byName_3T.setText(_translate("MainWindow", u"Search by Name"))
+                self.lineEdit_Name_3T.setPlaceholderText(_translate("MainWindow", u"Enter Name"))
+                self.lineEdit_filePath_3T.setPlaceholderText(_translate("MainWindow", u"Text File Path"))
+                self.btn_browse_3T.setText(_translate("MainWindow", u"Browse"))
+                self.textEdit_results_3T.setPlaceholderText(_translate("MainWindow", u"Results"))
+                self.btn_search_3T.setText(_translate("MainWindow", u"Search"))
+                self.label_6.setText(_translate("MainWindow", u"Fitler by:"))
+                self.lineEdit_number_3T.setPlaceholderText(_translate("MainWindow", u"Enter Number"))
+                self.btn_apply_3T.setText(_translate("MainWindow", u"Apply"))
+                self.Times3Btn.setText(_translate("MainWindow", u"3 Times", None))
+
         # changing tabs
         def showSearchTab(self):
                 self.stackedWidget.setCurrentWidget(self.searchPage)
@@ -763,6 +993,10 @@ class Ui_MainWindow(object):
         def showMultiLineTab(self):
                 self.stackedWidget.setCurrentWidget(self.multiLinePage)
                 self.manageBackgroundColor(self.multiLineTabBtn)
+
+        def show3TimesTab(self):
+                self.stackedWidget.setCurrentWidget(self.Times3_Page)
+                self.manageBackgroundColor(self.Times3Btn)                
 
         # General Function to manage background colors        
         def manageBackgroundColor(self,QPushButton):                
@@ -783,6 +1017,9 @@ class Ui_MainWindow(object):
 
         def browseBtnPressed_2(self):
                 self.assignPath(self.filePathMulti_edit)
+                
+        def browseBtnPressed_3(self):
+                self.assignPath(self.lineEdit_filePath_3T)
 
         # return repititive pairs in list as a tupple        
         def find_repeated_number_pairs(self,lst):
@@ -801,6 +1038,30 @@ class Ui_MainWindow(object):
                                 if current_pair == next_pair:
                                         pairs.append(current_pair)
                                         break
+
+                return pairs
+        # return repititive pairs that appears atleast thrice in list as a tupple        
+        def find_repeated_number_pairs_thrice(self,lst):
+                pairs = []
+                n = len(lst)
+                
+
+                for i in range(n - 1):
+                        current_pair = (lst[i], lst[i+1])
+
+                        if current_pair in pairs:
+                                continue
+                        
+                        numberOfRepeations = 0
+
+                        for j in range(i+2, n-1):
+                                next_pair = (lst[j], lst[j+1])
+
+                                if current_pair == next_pair:
+                                        numberOfRepeations += 1
+                                        if numberOfRepeations == 2:
+                                                pairs.append(current_pair)
+                                                break
 
                 return pairs
         
@@ -944,6 +1205,7 @@ class Ui_MainWindow(object):
 
                         self.results_textEdit_multi.append(f'\n\t\t\tResults for {self.byNameMulti_edit.text()}\n')
                         if nameFound:
+                                print(jumboList)
                                 self.repeatedPairsMultiLine = self.find_repeated_number_pairs(jumboList)
                                 self.results_textEdit_multi.append(f'\n\t\t{self.byNameMulti_edit.text()} appeared {numberOfLines} times :')
                                 for i in timeDate:
@@ -967,6 +1229,60 @@ class Ui_MainWindow(object):
                                 self.textEdit.setText(f'\t Filtered Pairs :\t\t\t{filteredList}')                        
                         else:
                                 self.textEdit.setText(f'\t Filtered Pairs :\t\tNone')                        
+
+
+        def multiLineSearch_3Times(self):
+                if self.lineEdit_filePath_3T.text() != '' and self.lineEdit_Name_3T.text() != '':                
+                        filePath = open(self.lineEdit_filePath_3T.text(),'r')
+                        Lines = filePath.readlines()
+                        numberOfLines = 0
+                        timeDate = []
+                        nameFound = False
+                        # list for storing all the numbers for given name
+                        jumboList = []
+                        for line in Lines:
+                                splittedList = line.split('"')
+                                if line.strip() and self.lineEdit_Name_3T.text() == splittedList[1]:                  # check if entered name matches name in text file
+                                        # print(splittedList)
+                                        numberOfLines += 1
+                                        nameFound = True
+                                        timeDate.append(splittedList[0])
+                                        editedList = splittedList[2].split(' ')                 # put every number in the array                                        
+                                        # cleaning array
+                                        editedList[-1] = str(editedList[-1]).replace('\n','')   
+                                        editedList.remove('')
+                                        if '' in editedList:
+                                                editedList.remove('')
+                                        # print(editedList)
+                                        # editedList = list(map(int, editedList))                 # type casting
+                                        # print(editedList)
+                                        jumboList += editedList
+
+                        self.textEdit_results_3T.append(f'\n\t\t\tResults for {self.lineEdit_Name_3T.text()}\n')
+                        if nameFound:
+                                self.repeatedPairsMultiLine_3Times = self.find_repeated_number_pairs_thrice(jumboList)                                
+                                self.textEdit_results_3T.append(f'\n\t\t{self.lineEdit_Name_3T.text()} appeared {numberOfLines} times :')
+                                for i in timeDate:
+                                        self.textEdit_results_3T.append(f'\n\t{i}')
+                                self.textEdit_results_3T.append(f'\n\tRepeated Pairs : {self.repeatedPairsMultiLine_3Times}')
+                        else:
+                                self.textEdit_results_3T.append(f'\n\t\tName not Found')
+
+                else:
+                        QtWidgets.QMessageBox.critical(None,'Error','Make sure fields are filled')
+
+        def ApplyFilterPressed_3Times(self):
+                if self.repeatedPairsMultiLine_3Times:
+                        filteredList = []
+                        matched = False
+                        for i in self.repeatedPairsMultiLine_3Times:
+                                if i[0] == self.lineEdit_number_3T.text():
+                                        matched = True
+                                        filteredList.append(i)
+                        if matched:
+                                self.textEdit_filterResults_3T.setText(f'\t Filtered Pairs :\t\t\t{filteredList}')                        
+                        else:
+                                self.textEdit_filterResults_3T.setText(f'\t Filtered Pairs :\t\t\tNone')
 
 if __name__ == "__main__":
     import sys
